@@ -1,0 +1,35 @@
+.header-container-1 {
+    width: 100%;
+    height: var(--headerHeight);
+    display: flex;
+    background: rgba(247, 255, 251, 0.98);
+    border-bottom: 3px solid var(--light-green);
+    font-size: 18px;
+}
+.header-container-2 {
+    width: 1120px;
+    height: inherit;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.header-links {
+    font-weight: 300;
+    cursor: pointer;
+    margin: auto 50px auto 0;
+}
+.header-icon-link {
+    cursor: pointer;
+    margin: auto 0;
+}
+.header-logo-icon, .header-users-icon, .header-profile-icon {
+    display: flex;
+}
+.header-users-icon > svg, .header-profile-icon > svg, .header-logo-icon > svg {
+    transform: scale(0.75);
+    margin: auto 0;
+    display: flex;
+}
+.header-logo-icon > svg {
+    transform: scale(0.8);
+}

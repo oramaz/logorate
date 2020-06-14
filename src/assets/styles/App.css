@@ -1,0 +1,19 @@
+:root {
+  --gradientY: linear-gradient(180deg, #58F597 0%, rgba(88, 170, 245, 0.85) 100%);
+  --gradientX: linear-gradient(89.95deg, #58F597 0.02%, rgba(88, 170, 245, 0.85) 99.98%);
+  --light-green: #58f597;
+
+  --headerHeight: 90px;
+}
+.svg-my-auto {
+  display: flex;
+}
+.svg-my-auto > svg {
+  margin: auto 0;
+  display: flex;
+}
+.gradient-text {
+  background: var(--gradientY);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
