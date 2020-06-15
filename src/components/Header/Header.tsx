@@ -23,42 +23,47 @@ export const Header: React.FC = () => {
     return (
         <div className="header-container-1">
             <div className="header-container-2">
-                <div className="d-flex">
-                    <div className="my-auto header-logo-icon">
+                <div className="header-logo-icon-container">
+                    <div
+                        className="header-logo-icon header-icon-link"
+                        onClick={() => {
+                            history.push("/")
+                        }}
+                    >
                         <LogoIcon/>
                     </div>
                 </div>
-                <div className="d-flex">
-                    <div className="d-flex">
+                <div className="header-container-3">
+                    <div className="header-users-online">
                         <div className="svg-my-auto header-users-icon" style={{marginRight: "10px"}}>
                             <UserIcon/>
                         </div>
                         <div className="d-flex" style={{marginRight: "50px"}}>
                             <div className="my-auto header-text gradient-text">{usersOnline}</div>
                         </div>
-                        {headerLinks.map(x => {
-                            return (
-                                <div className="d-flex">
-                                    <div
-                                        className="header-links"
-                                        onClick={() => {
-                                            history.push(x.to)
-                                        }}
-                                    >
-                                        {x.name}
-                                    </div>
+                    </div>
+                    {headerLinks.map(x => {
+                        return (
+                            <div className="d-flex">
+                                <div
+                                    className="header-links"
+                                    onClick={() => {
+                                        history.push(x.to)
+                                    }}
+                                >
+                                    {x.name}
                                 </div>
-                            )
-                        })}
-                        <div className="svg-my-auto" >
-                            <div
-                                className="header-icon-link header-profile-icon"
-                                onClick={() => {
-                                    history.push("/profile")
-                                }}
-                            >
-                                <ProfileIcon/>
                             </div>
+                        )
+                    })}
+                    <div className="d-flex" >
+                        <div
+                            className="header-icon-link header-profile-icon"
+                            onClick={() => {
+                                history.push("/profile")
+                            }}
+                        >
+                            <ProfileIcon/>
                         </div>
                     </div>
                 </div>

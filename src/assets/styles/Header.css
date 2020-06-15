@@ -1,17 +1,20 @@
 .header-container-1 {
     width: 100%;
-    height: var(--headerHeight);
+    height: 90px;
     display: flex;
     background: rgba(247, 255, 251, 0.98);
     border-bottom: 3px solid var(--light-green);
     font-size: 18px;
 }
 .header-container-2 {
-    width: 1120px;
+    width: var(--content--max-width);
     height: inherit;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
+}
+.header-container-3 {
+    display: flex;
 }
 .header-links {
     font-weight: 300;
@@ -21,6 +24,9 @@
 .header-icon-link {
     cursor: pointer;
     margin: auto 0;
+}
+.header-logo-icon-container{
+    display: flex;
 }
 .header-logo-icon, .header-users-icon, .header-profile-icon {
     display: flex;
@@ -32,4 +38,41 @@
 }
 .header-logo-icon > svg {
     transform: scale(0.8);
+}
+.header-users-online {
+    display: flex;
+}
+
+@media (min-width: 839px) and (max-width: 1140px) {
+    .header-container-2 {
+        padding: 0 20px;
+    }
+}
+@media (max-width: 839px) {
+    .header-container-2 {
+        padding: 0 20px;
+    }
+    .header-users-online {
+        display: none;
+    }
+}
+@media (max-width: 730px) {
+    .header-container-2 {
+        padding: 0 20px;
+    }
+    .header-users-online {
+        display: none;
+    }
+    .header-logo-icon, .header-logo-icon-container {
+        display: none !important;
+    }
+    .header-container-3 {
+        margin: 0 auto;
+    }
+
+}
+@media (max-width: 505px) {
+    .header-links {
+        margin: auto 20px auto 0;
+    }
 }
