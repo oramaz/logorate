@@ -1,8 +1,8 @@
 import * as React from "react";
 import {Route, Switch, Redirect, useLocation} from "react-router-dom";
 import {NotFoundPage} from "./components/404/NotFoundPage";
-import {LoginPage} from "./views/LoginPage";
-import {SignupPage} from "./views/SignupPage";
+import {LoginPage} from "./views/Auth/LoginPage";
+import {SignupPage} from "./views/Auth/SignupPage";
 import {Header} from "./components/Header/Header";
 
 const Routes: React.FC = () => {

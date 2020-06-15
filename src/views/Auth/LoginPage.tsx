@@ -5,7 +5,7 @@ import {
     GooglePlusIcon, PwdInputIcon,
     TwitterIcon,
     VKIcon
-} from "../assets/images/Icons";
+} from "../../assets/images/Icons";
 import {useHistory} from "react-router-dom"
 
 export const LoginPage: React.FC = () => {
