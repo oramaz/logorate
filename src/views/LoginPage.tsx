@@ -14,7 +14,7 @@ export const LoginPage: React.FC = () => {
     return (
         <div className="content-container-1">
             <div className="title-social-container">
-                <div className="content-title mx-auto">
+                <div className="content-title mx-auto"  style={{marginBottom: "30px"}}>
                     Sign in
                 </div>
                 <div className="d-flex mx-auto">
@@ -23,9 +23,9 @@ export const LoginPage: React.FC = () => {
                     <div className="vk-icon"><VKIcon/></div>
                     <div className="fb-icon"><FBIcon/></div>
                 </div>
-                <div className="content-text" style={{margin: "32px auto 42px auto"}}>or</div>
+                <div className="content-text" style={{margin: "30px auto 30px auto"}}>or</div>
             </div>
-            <div className="content-form-container mx-auto"  style={{marginBottom: "48px"}}>
+            <div className="content-form-container mx-auto"  style={{marginBottom: "30px"}}>
                 <form>
                     <div className="content-input-container" style={{marginBottom: "24px"}}>
                         <span className="input-icon"><EmailInputIcon/></span>
@@ -35,7 +35,7 @@ export const LoginPage: React.FC = () => {
                         <span className="input-icon"><PwdInputIcon/></span>
                         <input type="password" className="content-input" placeholder="Password" />
                     </div>
-                    <div className="d-flex justify-content-between" style={{marginBottom: "48px"}}>
+                    <div className="d-flex justify-content-between" style={{marginBottom: "50px"}}>
                         <div className="d-flex">
                             <input type="checkbox" style={{marginRight: "10px"}} className="content-checkbox" />
                             <div className="content-text-small">Remember me</div>

@@ -27,7 +27,6 @@
 .content-title {
   font-weight: 300;
   font-size: 48px;
-  margin-bottom: 36px;
 }
 .content-text {
   font-weight: 300;
@@ -53,10 +52,10 @@
 .twitter-icon, .google-plus-icon, .vk-icon, .fb-icon{
   border-radius: 50%;
   cursor: pointer;
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 .twitter-icon, .google-plus-icon, .vk-icon{
-  margin-right: 52px;
+  margin-right: 20px;
   border-radius: 50%;
 }
 .twitter-icon:hover {
@@ -112,19 +111,16 @@
   .twitter-icon, .google-plus-icon, .vk-icon, .fb-icon{
     transform: scale(0.8);
   }
-  .twitter-icon, .google-plus-icon, .vk-icon {
-    margin-right: 32px;
-  }
 }
 @media (max-width: 505px) {
   .content-form-container {
     width: 300px;
   }
   .twitter-icon, .google-plus-icon, .vk-icon, .fb-icon{
-    transform: scale(0.6);
+    transform: scale(0.7);
   }
   .twitter-icon, .google-plus-icon, .vk-icon {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 
