@@ -26,10 +26,10 @@ export const LoginPage: React.FC = () => {
                 <div className="content-text" style={{margin: "30px auto 30px auto"}}>or</div>
             </div>
             <div className="content-form-container mx-auto"  style={{marginBottom: "30px"}}>
-                <form>
+                <form action={'http://localhost:8888/api/user/login'} method={'POST'}>
                     <div className="content-input-container" style={{marginBottom: "24px"}}>
                         <span className="input-icon"><EmailInputIcon/></span>
-                        <input type="email" className="content-input" placeholder="Email" />
+                        <input type="email" className="content-input" placeholder="Email"/>
                     </div>
                     <div className="content-input-container" style={{marginBottom: "24px"}}>
                         <span className="input-icon"><PwdInputIcon/></span>
