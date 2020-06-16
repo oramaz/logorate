@@ -29,11 +29,11 @@ export const LoginPage: React.FC = () => {
                 <form action={'http://localhost:8888/api/user/login'} method={'POST'}>
                     <div className="content-input-container" style={{marginBottom: "24px"}}>
                         <span className="input-icon"><EmailInputIcon/></span>
-                        <input type="email" className="content-input" placeholder="Email"/>
+                        <input type="email" required className="content-input" placeholder="Email"/>
                     </div>
                     <div className="content-input-container" style={{marginBottom: "24px"}}>
                         <span className="input-icon"><PwdInputIcon/></span>
-                        <input type="password" className="content-input" placeholder="Password" />
+                        <input type="password" required className="content-input" placeholder="Password" />
                     </div>
                     <div className="d-flex justify-content-between" style={{marginBottom: "50px"}}>
                         <div className="d-flex">

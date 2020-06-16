@@ -1,10 +1,7 @@
 import React from "react";
 import {
     EmailInputIcon,
-    FBIcon,
-    GooglePlusIcon, PwdInputIcon,
-    TwitterIcon,
-    VKIcon
+     PwdInputIcon,
 } from "../../assets/images/Icons";
 import {useHistory} from "react-router-dom"
 
@@ -22,15 +19,15 @@ export const SignupPage: React.FC = () => {
                 <form action={'http://localhost:8888/api/user/register'} method={'POST'}>
                     <div className="content-input-container" style={{marginBottom: "32px"}}>
                         <span className="input-icon"><EmailInputIcon/></span>
-                        <input type="email" className="content-input" placeholder="Email" title="email"/>
+                        <input type="email" required  className="content-input" placeholder="Email" title="email"/>
                     </div>
                     <div className="content-input-container" style={{marginBottom: "32px"}}>
                         <span className="input-icon"><PwdInputIcon/></span>
-                        <input type="password" className="content-input" placeholder="Password" />
+                        <input type="password" required className="content-input" placeholder="Password" />
                     </div>
                     <div className="content-input-container" style={{marginBottom: "50px"}}>
                         <span className="input-icon"><PwdInputIcon/></span>
-                        <input type="password" className="content-input" placeholder="Confirm the password" />
+                        <input type="password" required className="content-input" placeholder="Confirm the password" />
                     </div>
                     <div className="d-flex">
                         <button type="submit" className="content-btn mx-auto">Let's go!</button>
