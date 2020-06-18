@@ -30,7 +30,7 @@ export const LoginPage: React.FC = () => {
         const password = e.target.elements.password.value
 
         if(email && password) {
-            const res = await axios.get(
+            const res = await axios.post(
                `${API_URL}/users/login/`,
                {
                    params: {
