@@ -18,7 +18,7 @@ export const SignupPage: React.FC = () => {
 
       if(email && password && password === password2) {
          const res = await axios.post(
-            `${API_URL}/users/register/`,
+            `${API_URL}/users/register`,
             {
                headers: {
                   'Accept': 'application/json, text/plain, */*',
