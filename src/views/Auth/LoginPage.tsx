@@ -13,12 +13,15 @@ import axios, {AxiosResponse} from "axios";
 export const LoginPage: React.FC = () => {
     const history = useHistory();
 
-    const SocialAuth = async (provider: string) => {
+    const socialAuth = async (provider: string) => {
         const res = await axios.get(
            `${API_URL}/users/login/${provider}`,
-           {},
+           {
+               params: {
+                   provider: provider
+               }
+           },
         );
-        console.log(res)
     }
 
     return (
@@ -29,9 +32,9 @@ export const LoginPage: React.FC = () => {
                 </div>
                 <div className="d-flex mx-auto">
                     <div className="twitter-icon"><TwitterIcon/></div>
-                    <div className="google-plus-icon"><GooglePlusIcon/></div>
-                    <div className="vk-icon" onClick={() => SocialAuth("vkontakte")}><VKIcon/></div>
-                    <div className="fb-icon"><FBIcon/></div>
+                    <div className="google-plus-icon" onClick={() => socialAuth("google")}><GooglePlusIcon/></div>
+                    <div className="vk-icon" onClick={() => socialAuth("vkontakte")}><VKIcon/></div>
+                    <div className="fb-icon" onClick={() => socialAuth("facebook")}><FBIcon/></div>
                 </div>
                 <div className="content-text" style={{margin: "30px auto 30px auto"}}>or</div>
             </div>
