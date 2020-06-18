@@ -33,6 +33,10 @@ export const LoginPage: React.FC = () => {
             const res = await axios.post(
                `${API_URL}/users/login/`,
                {
+                  headers: {
+                     'Accept': 'application/json, text/plain, */*',
+                     'Content-Type': 'application/json'
+                  },
                    params: {
                        email: email,
                        password: password
