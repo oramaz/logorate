@@ -32,9 +32,9 @@ export const LoginPage: React.FC = () => {
                 </div>
                 <div className="d-flex mx-auto">
                     <div className="twitter-icon"><TwitterIcon/></div>
-                    <div className="google-plus-icon" onClick={() => socialAuth("google")}><GooglePlusIcon/></div>
-                    <div className="vk-icon" onClick={() => socialAuth("vkontakte")}><VKIcon/></div>
-                    <div className="fb-icon" onClick={() => socialAuth("facebook")}><FBIcon/></div>
+                    <div className="google-plus-icon" onClick={() => window.location.href = `${API_URL}/users/login/google`}><GooglePlusIcon/></div>
+                    <div className="vk-icon" onClick={() =>   window.location.href = `${API_URL}/users/login/vkontakte`}><VKIcon/></div>
+                    <div className="fb-icon" onClick={() => window.location.href = `${API_URL}/users/login/facebook`}><FBIcon/></div>
                 </div>
                 <div className="content-text" style={{margin: "30px auto 30px auto"}}>or</div>
             </div>

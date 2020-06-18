@@ -15,8 +15,8 @@ const Routes: React.FC = () => {
             <Switch>
                 <Route path='/login' component={LoginPage} />
                 <Route path='/signup' component={SignupPage} />
-                <Route path='/404' component={NotFoundPage} />
-                <Redirect to='/404'/>
+                {/*<Route path='/404' component={NotFoundPage} />*/}
+                {/*<Redirect to='/404'/>*/}
             </Switch>
         </div>
     )
