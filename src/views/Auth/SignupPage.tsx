@@ -16,7 +16,7 @@ export const SignupPage: React.FC = () => {
                 </div>
             </div>
             <div className="content-form-container mx-auto"  style={{marginBottom: "30px"}}>
-                <form action={'http://localhost:8888/api/user/register'} method={'POST'}>
+                <form action={`{$API_URL}/user/register`} method={'POST'}>
                     <div className="content-input-container" style={{marginBottom: "32px"}}>
                         <span className="input-icon"><EmailInputIcon/></span>
                         <input type="email" required  className="content-input" placeholder="Email" title="email"/>

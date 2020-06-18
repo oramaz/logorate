@@ -6,10 +6,20 @@ import {
     TwitterIcon,
     VKIcon
 } from "../../assets/images/Icons";
-import {useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom";
+import { API_URL } from "../../utils/urls"
+import axios, {AxiosResponse} from "axios";
 
 export const LoginPage: React.FC = () => {
     const history = useHistory();
+
+    const SocialAuth = async (provider: string) => {
+        const res = await axios.get(
+           `${API_URL}/users/login/${provider}`,
+           {},
+        );
+        console.log(res)
+    }
 
     return (
         <div className="content-container-1">
@@ -20,13 +30,13 @@ export const LoginPage: React.FC = () => {
                 <div className="d-flex mx-auto">
                     <div className="twitter-icon"><TwitterIcon/></div>
                     <div className="google-plus-icon"><GooglePlusIcon/></div>
-                    <div className="vk-icon"><VKIcon/></div>
+                    <div className="vk-icon" onClick={() => SocialAuth("vkontakte")}><VKIcon/></div>
                     <div className="fb-icon"><FBIcon/></div>
                 </div>
                 <div className="content-text" style={{margin: "30px auto 30px auto"}}>or</div>
             </div>
             <div className="content-form-container mx-auto"  style={{marginBottom: "30px"}}>
-                <form action={'http://localhost:8888/api/user/login'} method={'POST'}>
+                <form action={`{$API_URL}/user/register`} method={'POST'}>
                     <div className="content-input-container" style={{marginBottom: "24px"}}>
                         <span className="input-icon"><EmailInputIcon/></span>
                         <input type="email" required className="content-input" placeholder="Email"/>
