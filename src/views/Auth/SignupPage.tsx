@@ -20,15 +20,15 @@ export const SignupPage: React.FC = () => {
          const res = await axios.post(
             `${API_URL}/users/register`,
             {
+               email: email,
+               password: password,
+               password_confirm: password2
+            },
+            {
                headers: {
                   'Accept': 'application/json, text/plain, */*',
                   'Content-Type': 'application/json'
                },
-               params: {
-                  email: email,
-                  password: password,
-                  password_confirm: password2
-               }
             },
          );
          console.log(res)
