@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
    EmailInputIcon,
    FBIcon,
@@ -13,16 +13,35 @@ import axios, {AxiosResponse} from "axios";
 export const LoginPage: React.FC = () => {
    const history = useHistory();
 
-   const socialAuth = async (provider: string) => {
-      const res = await axios.get(
-         `${API_URL}/users/login/${provider}`,
-         {
-            params: {
-               provider: provider
-            }
-         },
-      );
-   }
+   const [googleAuthLink, setGoogleAuthLink] = useState("")
+   const [VKAuthLink, setVKAuthLink] = useState("")
+   const [FBAuthLink, setFBAuthLink] = useState("")
+
+   useEffect(() => {
+      const getSocialAuthLinks =  async () => {
+         const google = await axios.get(
+            `${API_URL}/users/login/google`,
+            {},
+         );
+         console.log(google.data.url)
+         setGoogleAuthLink(google.data.url)
+
+         const vk = await axios.get(
+            `${API_URL}/users/login/vkontakte`,
+            {},
+         );
+         console.log(vk.data.url)
+         setVKAuthLink(vk.data.url)
+
+         const fb = await axios.get(
+            `${API_URL}/users/login/facebook`,
+            {},
+         );
+         console.log(fb.data.url)
+         setFBAuthLink(fb.data.url)
+      }
+      getSocialAuthLinks()
+   })
 
    const handleLogin = async (e: any) => {
       e.preventDefault();
@@ -55,9 +74,9 @@ export const LoginPage: React.FC = () => {
             </div>
             <div className="d-flex mx-auto">
                <div className="twitter-icon"><TwitterIcon/></div>
-               <div className="google-plus-icon" onClick={() => window.location.href = `${API_URL}/users/login/google`}><GooglePlusIcon/></div>
-               <div className="vk-icon" onClick={() =>   window.location.href = `${API_URL}/users/login/vkontakte`}><VKIcon/></div>
-               <div className="fb-icon" onClick={() => window.location.href = `${API_URL}/users/login/facebook`}><FBIcon/></div>
+               <div className="google-plus-icon" onClick={() => window.location.href = googleAuthLink}><GooglePlusIcon/></div>
+               <div className="vk-icon" onClick={() => window.location.href = VKAuthLink}><VKIcon/></div>
+               <div className="fb-icon" onClick={() => window.location.href = FBAuthLink}><FBIcon/></div>
             </div>
             <div className="content-text" style={{margin: "30px auto 30px auto"}}>or</div>
          </div>
