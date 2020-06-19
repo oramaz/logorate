@@ -23,21 +23,18 @@ export const LoginPage: React.FC = () => {
             `${API_URL}/users/login/google`,
             {},
          );
-         console.log(google.data.url)
          setGoogleAuthLink(google.data.url)
 
          const vk = await axios.get(
             `${API_URL}/users/login/vkontakte`,
             {},
          );
-         console.log(vk.data.url)
          setVKAuthLink(vk.data.url)
 
          const fb = await axios.get(
             `${API_URL}/users/login/facebook`,
             {},
          );
-         console.log(fb.data.url)
          setFBAuthLink(fb.data.url)
       }
       getSocialAuthLinks()
