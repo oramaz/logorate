@@ -15,7 +15,7 @@ export const LoginGoogle: React.FC = () => {
             throw new Error('Something went wrong!');
          })
          .then((data) => {
-            sessionStorage.setItem("data", data)
+            sessionStorage.setItem("data", JSON.stringify(data))
             history.push("/login")
          })
          .catch((error) => {
