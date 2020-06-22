@@ -1,13 +1,14 @@
 import React, {useEffect} from "react";
-import {useHistory, useLocation} from "react-router-dom";
+import {useHistory, useLocation, useParams} from "react-router-dom";
 import { API_URL } from "../../utils/urls"
 
-export const LoginGoogle: React.FC = () => {
+export const SocialLogin: React.FC = () => {
    const history = useHistory();
+   const { provider } = useParams()
    const location = useLocation();
 
    useEffect(() => {
-      fetch(`${API_URL}/users/login/google/callback${location.search}`, { headers: new Headers({ accept: 'application/json' }) })
+      fetch(`${API_URL}/users/login/${provider}/callback${location.search}`, { headers: new Headers({ accept: 'application/json' }) })
          .then((response) => {
             if (response.ok) {
                return response.json();
@@ -24,8 +25,6 @@ export const LoginGoogle: React.FC = () => {
    }, [])
 
    return (
-      <div className="">
-         google
-      </div>
+      <div/>
    );
 };

@@ -4,24 +4,21 @@ import {NotFoundPage} from "./components/404/NotFoundPage";
 import {LoginPage} from "./views/Auth/LoginPage";
 import {SignupPage} from "./views/Auth/SignupPage";
 import {Header} from "./components/Header/Header";
-import {LoginGoogle} from "./components/SocialAuth/LoginGoogle";
+import {SocialLogin} from "./components/SocialAuth/SocialLogin";
 
 const Routes: React.FC = () => {
-    const location = useLocation();
-    return (
-        <div>
-            {location.pathname != "/404" &&
-                <Header/>
-            }
-            <Switch>
-                <Route path='/login' component={LoginPage} />
-                <Route path='/signup' component={SignupPage} />
-               <Route exact path="/auth/google" component={LoginGoogle} />
-                {/*<Route path='/404' component={NotFoundPage} />*/}
-                {/*<Redirect to='/404'/>*/}
-            </Switch>
-        </div>
-    )
+   const location = useLocation();
+   return (
+      <div>
+         <Header/>
+         <Switch>
+            <Route path='/login' component={LoginPage} />
+            <Route path='/signup' component={SignupPage} />
+            <Route exact path="/auth/:provider" component={SocialLogin} />
+            <Route component={NotFoundPage} />
+         </Switch>
+      </div>
+   )
 };
 
 export default Routes;

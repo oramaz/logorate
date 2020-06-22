@@ -38,7 +38,7 @@ export const LoginPage: React.FC = () => {
          setFBAuthLink(fb.data.url)
       }
       getSocialAuthLinks()
-   })
+   }, [])
 
    const handleLogin = async (e: any) => {
       e.preventDefault();
