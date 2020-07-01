@@ -36,7 +36,7 @@ export const SignupPage: React.FC = () => {
    }
 
     return (
-        <div className="content-container-1">
+       <div className="content-container-1">
             <div className="d-flex"  style={{marginBottom: "70px"}}>
                 <div className="content-title mx-auto">
                     Sign up

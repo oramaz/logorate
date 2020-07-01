@@ -7,19 +7,21 @@ import {Header} from "./components/Header/Header";
 import {SocialLogin} from "./components/SocialAuth/SocialLogin";
 import {PasswordRecovery} from "./views/Auth/PasswordRecovery";
 import {Footer} from "./components/Footer/Footer";
+import {HomePage} from "./views/HomePage";
 
 const Routes: React.FC = () => {
    const location = useLocation();
    return (
       <div>
          <Header/>
-         <Switch>
-            <Route path='/login' component={LoginPage} />
-            <Route path='/signup' component={SignupPage} />
-            <Route exact path="/auth/:provider" component={SocialLogin} />
-            <Route path='/recovery' component={PasswordRecovery} />
-            <Route component={NotFoundPage} />
-         </Switch>
+            <Switch>
+               <Route path='/s' component={HomePage} />
+               <Route path='/login' component={LoginPage} />
+               <Route path='/signup' component={SignupPage} />
+               <Route exact path="/auth/:provider" component={SocialLogin} />
+               <Route path='/recovery' component={PasswordRecovery} />
+               <Route component={NotFoundPage} />
+            </Switch>
          <Footer/>
       </div>
    )

@@ -9,6 +9,7 @@ import {
 import {useHistory} from "react-router-dom";
 import { API_URL } from "../../utils/urls"
 import axios, {AxiosResponse} from "axios";
+import {ReactComponent} from "*.svg";
 
 export const LoginPage: React.FC = () => {
    const history = useHistory();

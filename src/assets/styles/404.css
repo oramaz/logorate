@@ -1,6 +1,7 @@
 #notfound {
   position: relative;
-  height: 85vh;
+  height: 55vh;
+  margin-bottom: -100px;
 }
 
 #notfound .notfound {
