@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
     EmailInputIcon,
     FBIcon,
@@ -6,50 +6,34 @@ import {
     TwitterIcon,
     VKIcon
 } from "../../assets/images/Icons";
-import {useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom";
+import { API_URL } from "../../utils/urls"
+import axios, {AxiosResponse} from "axios";
 
-export const SignupPage: React.FC = () => {
-    const history = useHistory();
+export const PasswordRecovery: React.FC = () => {
 
     return (
-        <div className="content-container-1">
-            <div className="d-flex"  style={{marginBottom: "70px"}}>
-                <div className="content-title mx-auto">
-                    Sign up
-                </div>
-            </div>
-            <div className="content-form-container mx-auto"  style={{marginBottom: "30px"}}>
-                <form>
-                    <div className="content-input-container" style={{marginBottom: "32px"}}>
-                        <span className="input-icon"><EmailInputIcon/></span>
-                        <input type="email" className="content-input" placeholder="Email" />
-                    </div>
-                    <div className="content-input-container" style={{marginBottom: "32px"}}>
-                        <span className="input-icon"><PwdInputIcon/></span>
-                        <input type="password" className="content-input" placeholder="Password" />
-                    </div>
-                    <div className="content-input-container" style={{marginBottom: "50px"}}>
-                        <span className="input-icon"><PwdInputIcon/></span>
-                        <input type="password" className="content-input" placeholder="Confirm the password" />
-                    </div>
-                    <div className="d-flex">
-                        <button type="submit" className="content-btn mx-auto">Let's go!</button>
-                    </div>
-                </form>
-            </div>
-            <div className="d-flex">
-                <div className="mx-auto content-text">
-                    Already have an account?
-                    <span style={{marginLeft: "10px"}}
-                          className="content-text-link"
-                          onClick={() => {
-                              history.push("/login")
-                          }}
-                    >
-                        Log in!
-                    </span>
-                </div>
-            </div>
-        </div>
+       <div className="content-container-1">
+           <div className="title-social-container" style={{marginBottom: "50px"}}>
+               <div className="content-title mx-auto"  style={{marginBottom: "30px"}}>
+                   Password recovery
+               </div>
+               <div className="content-text-small mx-auto text-center" >
+                   <div>Enter Your email address and we will send you</div>instructions for password recovery
+               </div>
+           </div>
+           <div className="content-form-container mx-auto">
+               <form>
+                   <div className="content-input-container" style={{marginBottom: "50px"}}>
+                       <span className="input-icon"><EmailInputIcon/></span>
+                       <input type="email" name="email" required className="content-input" placeholder="Email"/>
+                   </div>
+
+                   <div className="d-flex">
+                       <button type="submit" className="content-btn mx-auto">Recover</button>
+                   </div>
+               </form>
+           </div>
+       </div>
     );
 };

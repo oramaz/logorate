@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import "../../assets/styles/Header.css";
 import { useHistory } from "react-router";
 import {LogoIcon, UserIcon, ProfileIcon} from "../../assets/images/Icons";
+import {Link} from "react-router-dom";
 
 export const Header: React.FC = () => {
     const history = useHistory();
@@ -45,14 +46,9 @@ export const Header: React.FC = () => {
                     {headerLinks.map(x => {
                         return (
                             <div className="d-flex">
-                                <div
-                                    className="header-links"
-                                    onClick={() => {
-                                        history.push(x.to)
-                                    }}
-                                >
+                                <Link className="header-links" to={x.to}>
                                     {x.name}
-                                </div>
+                                </Link>
                             </div>
                         )
                     })}

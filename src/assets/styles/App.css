@@ -6,7 +6,12 @@
 
    --content--max-width: 1120px;
 }
-
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+   outline: none;
+}
 .gradient-text {
    background: var(--gradientY);
    -webkit-background-clip: text;
@@ -14,7 +19,7 @@
 }
 .content-container-1 {
    max-width: var(--content--max-width);
-   margin: 70px auto 200px auto;
+   margin: 70px auto 150px auto;
 }
 .content-btn {
    padding: 15px 45px;
@@ -24,6 +29,7 @@
    font-size: 24px;
    color: white;
    border: unset;
+   outline: none !important;
 }
 .content-title {
    font-weight: 300;
@@ -33,9 +39,10 @@
    font-weight: 300;
    font-size: 24px;
 }
+
 .content-text-small {
    font-weight: 300;
-   font-size: 16px;
+   font-size: 18px;
 }
 .content-text-link {
    cursor: pointer;
@@ -90,7 +97,7 @@
    height: inherit;
    outline: none;
    /*border-radius: 20px;*/
-   border: solid 2px transparent;
+   border: solid 1.5px transparent;
    border-radius: 20px;
    background-image: linear-gradient(white, white), var(--gradientY);
    background-origin: border-box;
@@ -99,6 +106,7 @@
    text-indent: 60px;
    box-shadow: unset;
 }
+
 .content-input::placeholder {
    font-weight: 300;
    font-size: 18px;
