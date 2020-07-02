@@ -9,7 +9,7 @@ export const LoginModal: React.FC = () => {
    return (
       <React.Fragment>
          <Modal show={isLoginModal} onHide={() => setIsLoginModal(false)}
-                centered scrollable animation={false} dialogClassName="modal-600w">
+                centered scrollable dialogClassName="modal-600w">
             <Modal.Body className="mx-auto" style={{padding: "40px 0"}}>
                <LoginForm/>
             </Modal.Body>

@@ -10,6 +10,6 @@ type Props = {
 export const Title: React.FC<Props> = (props) => {
    const { text, style, className } = props
    return (
-      <div className={`content-title mx-auto ${className}`} aria-valuetext={text} style={style}/>
+      <div className={`content-title text-center ${className}`} aria-valuetext={text} style={style}/>
    )
 }

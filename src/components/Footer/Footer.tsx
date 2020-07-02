@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
                <div className="d-flex" style={{marginBottom: "15px"}}>
                   {headerLinks.map(x => {
                      return (
-                           <Link className="header-links"
+                           <Link key={x.name} className="header-links"
                                  style={headerLinks.indexOf(x) === headerLinks.length - 1 ?
                                     {marginRight: "0"} : {}} to={x.to}>
                               {x.name}

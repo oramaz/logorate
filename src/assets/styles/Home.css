@@ -39,3 +39,30 @@
    right: 0;
    cursor: pointer;
 }
+
+@media (min-width: 880px) and (max-width: 1140px) {
+
+}
+@media (max-width: 880px) {
+   .home-preview-search-container{
+      max-width: 500px;
+   }
+   .home-preview-container-2{
+      max-width: 500px;
+   }
+   .home-preview-title {
+      font-size: 40px;
+   }
+}
+@media (max-width: 780px) {
+
+}
+@media (max-width: 525px) {
+   .home-preview-container-2{
+      max-width: 350px;
+   }
+   .home-preview-title {
+      font-size: 30px;
+      line-height: 50px;
+   }
+}

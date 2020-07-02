@@ -6,11 +6,11 @@ import {Title} from "../Title";
 import {Link} from "react-router-dom";
 
 export const ProposalModal: React.FC = () => {
-   const [isLoginModal, setIsLoginModal] = useState(true)
+   const [isLoginModal, setIsLoginModal] = useState(false)
    return (
       <React.Fragment>
          <Modal show={isLoginModal} onHide={() => setIsLoginModal(false)}
-                centered scrollable animation={false} dialogClassName="modal-600w">
+                centered scrollable dialogClassName="modal-600w">
             <Modal.Body className="mx-auto" style={{padding: "40px 0"}}>
                <div className="text-center">
                   <Title text="Still paying for every logo?" style={{marginBottom: "30px"}}/>

@@ -8,6 +8,8 @@ import {SocialLogin} from "./components/SocialAuth/SocialLogin";
 import {PasswordRecovery} from "./views/Auth/PasswordRecovery";
 import {Footer} from "./components/Footer/Footer";
 import {HomePage} from "./views/HomePage";
+import {LoginModal} from "./components/Modals/LoginModal";
+import {ProposalModal} from "./components/Modals/ProposalModal";
 
 const Routes: React.FC = () => {
    const location = useLocation();
@@ -23,6 +25,8 @@ const Routes: React.FC = () => {
                <Route component={NotFoundPage} />
             </Switch>
          <Footer/>
+         <LoginModal/>
+         <ProposalModal/>
       </div>
    )
 };
