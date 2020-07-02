@@ -3,7 +3,7 @@
     height: 80px;
     display: flex;
     background: rgba(247, 255, 251, 0.98);
-    border-bottom: 3px solid var(--light-green);
+    border-bottom: 2px solid var(--light-green);
     font-size: 18px;
 }
 .header-container-2 {

@@ -15,11 +15,11 @@ const Routes: React.FC = () => {
       <div>
          <Header/>
             <Switch>
-               <Route path='/s' component={HomePage} />
-               <Route path='/login' component={LoginPage} />
-               <Route path='/signup' component={SignupPage} />
+               <Route exact path='/login' component={LoginPage} />
+               <Route exact path='/signup' component={SignupPage} />
                <Route exact path="/auth/:provider" component={SocialLogin} />
-               <Route path='/recovery' component={PasswordRecovery} />
+               <Route exact path='/recovery' component={PasswordRecovery} />
+               <Route exact path='/' component={HomePage} />
                <Route component={NotFoundPage} />
             </Switch>
          <Footer/>

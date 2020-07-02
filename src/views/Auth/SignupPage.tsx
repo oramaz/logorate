@@ -6,6 +6,7 @@ import {
 import {useHistory} from "react-router-dom"
 import axios from "axios";
 import {API_URL} from "../../utils/urls";
+import {Title} from "../../components/Title";
 
 export const SignupPage: React.FC = () => {
     const history = useHistory();
@@ -37,10 +38,8 @@ export const SignupPage: React.FC = () => {
 
     return (
        <div className="content-container-1">
-            <div className="d-flex"  style={{marginBottom: "70px"}}>
-                <div className="content-title mx-auto">
-                    Sign up
-                </div>
+            <div className="d-flex" >
+               <Title text="Sign up" style={{marginBottom: "30px"}}/>
             </div>
             <div className="content-form-container mx-auto"  style={{marginBottom: "30px"}}>
                 <form onSubmit={(e) => handleSignup(e)} method={'POST'}>
