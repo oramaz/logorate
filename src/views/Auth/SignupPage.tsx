@@ -6,7 +6,7 @@ import {
 import {useHistory} from "react-router-dom"
 import axios from "axios";
 import {API_URL} from "../../utils/urls";
-import {Title} from "../../components/Title";
+import {Title} from "../../components/General/Title";
 
 export const SignupPage: React.FC = () => {
    const history = useHistory();

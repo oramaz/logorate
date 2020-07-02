@@ -10,9 +10,14 @@ import {Footer} from "./components/Footer/Footer";
 import {HomePage} from "./views/HomePage";
 import {LoginModal} from "./components/Modals/LoginModal";
 import {ProposalModal} from "./components/Modals/ProposalModal";
+import {SearchLogoPage} from "./views/SearchLogoPage";
+import {SearchByCategoryPage} from "./views/CategorySearch";
 
 const Routes: React.FC = () => {
    const location = useLocation();
+
+
+
    return (
       <div>
          <Header/>
@@ -21,6 +26,8 @@ const Routes: React.FC = () => {
                <Route exact path='/signup' component={SignupPage} />
                <Route exact path="/auth/:provider" component={SocialLogin} />
                <Route exact path='/recovery' component={PasswordRecovery} />
+               <Route exact path='/search' component={SearchLogoPage} />
+               <Route exact path='/categories' component={SearchByCategoryPage} />
                <Route exact path='/' component={HomePage} />
                <Route component={NotFoundPage} />
             </Switch>

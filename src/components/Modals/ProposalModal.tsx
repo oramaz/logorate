@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import "../../assets/styles/App.css";
 
 import {Modal} from "react-bootstrap";
-import {Title} from "../Title";
+import {Title} from "../General/Title";
 import {Link} from "react-router-dom";
 
 export const ProposalModal: React.FC = () => {

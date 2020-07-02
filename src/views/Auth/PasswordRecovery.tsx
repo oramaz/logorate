@@ -2,7 +2,7 @@ import React from "react";
 import {
     EmailInputIcon,
 } from "../../assets/images/Icons";
-import {Title} from "../../components/Title";
+import {Title} from "../../components/General/Title";
 
 export const PasswordRecovery: React.FC = () => {
 

@@ -1,0 +1,12 @@
+select.form-control {
+   max-width: 300px;
+   border-radius: 20px;
+   border: solid 1.5px transparent;
+   background-image: linear-gradient(white, white), var(--gradientY);
+   background-origin: border-box;
+   background-clip: content-box, border-box;
+   padding: 0;
+}
+select > option {
+   padding: 30px !important;
+}

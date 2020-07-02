@@ -1,5 +1,5 @@
 import React from "react"
-import "../assets/styles/App.css";
+import "../../assets/styles/App.css";
 import {Link} from "react-router-dom";
 
 type Props = {

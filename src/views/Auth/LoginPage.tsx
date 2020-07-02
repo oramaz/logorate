@@ -10,7 +10,7 @@ import {useHistory} from "react-router-dom";
 import { API_URL } from "../../utils/urls"
 import axios, {AxiosResponse} from "axios";
 import {ReactComponent} from "*.svg";
-import {Title} from "../../components/Title";
+import {Title} from "../../components/General/Title";
 import {LoginForm} from "../../components/Auth/LoginForm";
 
 export const LoginPage: React.FC = () => {

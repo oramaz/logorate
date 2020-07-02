@@ -9,7 +9,7 @@ import {
 import {useHistory} from "react-router-dom";
 import { API_URL } from "../../utils/urls"
 import axios from "axios";
-import {Title} from "../../components/Title";
+import {Title} from "../General/Title";
 
 export const LoginForm: React.FC = () => {
    const history = useHistory();
