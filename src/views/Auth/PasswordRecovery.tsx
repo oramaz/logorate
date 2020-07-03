@@ -21,7 +21,7 @@ export const PasswordRecovery: React.FC = () => {
                        <input type="email" name="email" required className="content-input" placeholder="Email"/>
                    </div>
                    <div className="d-flex">
-                       <button type="submit" className="content-btn mx-auto">Recover</button>
+                       <button type="submit" className="content-btn mx-auto"  aria-valuetext="Recover"/>
                    </div>
                </form>
            </div>

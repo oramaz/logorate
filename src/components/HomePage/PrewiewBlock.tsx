@@ -33,7 +33,7 @@ export const HomePreview: React.FC<Props> = (props) => {
                <QueryPopover relatedQueries={getFilteredLogos(searchQuery).slice(0, 8)}/>
                }
             </div>
-            <button type="button" className="content-btn mx-auto">Generate logo</button>
+            <button type="button" className="content-btn mx-auto" aria-valuetext="Generate logo"/>
          </div>
       </div>
    )

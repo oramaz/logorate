@@ -12,7 +12,7 @@ export const CategoriesPopover: React.FC = () => {
          {categories.map(category => {
             return (
                <div key={category} className="d-inline-block" style={{padding: "10px 25px"}}>
-                  <Link to="#"  style={{color: "black"}}
+                  <Link to="/categories"  style={{color: "black"}}
                         className= "d-inline-block content-text-small">
                      {category}
                   </Link>

@@ -13,8 +13,7 @@ export const Tag: React.FC<Props> = (props) => {
    return (
       <Link to={linkTo} style={{textDecoration: "none"}}>
          <div className="content-tag gradient-border" style={style}>
-            <span style={{padding: "5px 20px"}}>
-               {name}
+            <span style={{padding: "5px 20px"}} aria-valuetext={name}>
             </span>
          </div>
       </Link>

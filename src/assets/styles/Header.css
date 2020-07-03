@@ -69,10 +69,6 @@
 .header-links-categories:hover .header-popover-container {
     display: block;
 }
-.header-links-categories:focus-within .header-popover-container {
-    display: none;
-}
-
 
 @media (min-width: 880px) and (max-width: 1140px) {
     .header-container-2 {

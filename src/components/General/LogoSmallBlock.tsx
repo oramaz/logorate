@@ -10,8 +10,9 @@ type Props = {
 
 export const LogoBlockSm: React.FC<Props> = (props) => {
    const { name, logoUrl, style } = props
+   // onContextMenu={(e) => e.preventDefault()}
    return (
-      <div style={{margin: "5px 15px 25px 15px"}} className="cursor-pointer" onContextMenu={(e) => e.preventDefault()}>
+      <Link style={{margin: "5px 15px 25px 15px"}} to={`/logo?id=${name}`} className="disableLinkStyle" >
          <div className="logo-small-container" style={{marginBottom: "10px"}}>
             <div className=" gradient-border" >
                <div style={{padding: "40px"}}>
@@ -20,6 +21,6 @@ export const LogoBlockSm: React.FC<Props> = (props) => {
             </div>
          </div>
          <div className="content-text-small" style={{width: "197px"}}>{name}</div>
-      </div>
+      </Link>
    )
 }

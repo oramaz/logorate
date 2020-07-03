@@ -100,7 +100,7 @@ export const LoginForm: React.FC = () => {
                   </div>
                </div>
                <div className="d-flex">
-                  <button type="submit" className="content-btn mx-auto">Let's go</button>
+                  <button type="submit" className="content-btn mx-auto" aria-valuetext="Let's go!"/>
                </div>
             </form>
          </div>

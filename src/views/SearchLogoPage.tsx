@@ -47,7 +47,7 @@ export const SearchLogoPage: React.FC = () => {
                   )
                })}
             </div>
-            <button type="button" className="content-btn mx-auto">Load more</button>
+            <button type="button" className="content-btn mx-auto"  aria-valuetext="Load more"/>
          </div>
       </React.Fragment>
    )

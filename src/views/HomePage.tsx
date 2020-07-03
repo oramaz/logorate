@@ -17,7 +17,7 @@ export const HomePage: React.FC = () => {
          <HomePreview logos={logos}/>
          <div className="content-container-1">
             <Title text="Most popular categories" style={{marginBottom: "50px"}} />
-            <div className="content-tags-container mx-auto" style={{marginBottom: "100px"}}>
+            <div className="content-tags-container justify-content-center mx-auto" style={{marginBottom: "100px"}}>
                {popularCategories.map(category => {
                   return (
                      <Tag key={category}  name={category} style={{margin: "0 15px 15px 0px"}} linkTo="#"/>
@@ -33,7 +33,7 @@ export const HomePage: React.FC = () => {
                      )
                   })}
                </div>
-               <button type="button" className="content-btn mx-auto">Load more</button>
+               <button type="button" className="content-btn mx-auto"  aria-valuetext="Load more"/>
             </div>
             <div className="text-center">
                <Title text="Most popular" style={{marginBottom: "50px"}}/>
@@ -44,7 +44,7 @@ export const HomePage: React.FC = () => {
                      )
                   })}
                </div>
-               <button type="button" className="content-btn mx-auto">Load more</button>
+               <button type="button" className="content-btn mx-auto"  aria-valuetext="Load more"/>
             </div>
          </div>
       </React.Fragment>

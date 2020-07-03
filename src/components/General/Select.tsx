@@ -1,19 +1,25 @@
 import React from "react"
 import "../../assets/styles/Select.css";
 import { Form } from "react-bootstrap";
-
+import Select from 'react-select'
 type Props = {
-   defaultValue: string;
-   style?: object;
+   placeholder: string;
 }
 
 export const CustomSelect: React.FC<Props> = (props) => {
-   const { style, defaultValue } = props
-
+   const { placeholder } = props
+   const customStyles = {
+      option: (provided: any, state: { isSelected: any; }) => ({
+         ...provided,
+         textAlign: "left",
+      }),
+   }
+   const options = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' }
+   ]
    return (
-      <Form.Control as="select"  defaultValue="Choose...">
-         <option>{defaultValue}</option>
-         <option>...</option>
-      </Form.Control>
+      <Select styles={customStyles} placeholder={placeholder} options={options} />
    )
 }

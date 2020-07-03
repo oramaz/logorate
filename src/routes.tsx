@@ -12,11 +12,13 @@ import {LoginModal} from "./components/Modals/LoginModal";
 import {ProposalModal} from "./components/Modals/ProposalModal";
 import {SearchLogoPage} from "./views/SearchLogoPage";
 import {SearchByCategoryPage} from "./views/CategorySearch";
+import {LogoBlockSm} from "./components/General/LogoSmallBlock";
+import {LogoPage} from "./views/LogoPage";
+import {useEffect} from "react";
+import {ProfilePage} from "./views/Profile";
 
 const Routes: React.FC = () => {
    const location = useLocation();
-
-
 
    return (
       <div>
@@ -28,6 +30,8 @@ const Routes: React.FC = () => {
                <Route exact path='/recovery' component={PasswordRecovery} />
                <Route exact path='/search' component={SearchLogoPage} />
                <Route exact path='/categories' component={SearchByCategoryPage} />
+               <Route exact path='/profile' component={ProfilePage} />
+               <Route exact path='/logo' component={LogoPage} />
                <Route exact path='/' component={HomePage} />
                <Route component={NotFoundPage} />
             </Switch>

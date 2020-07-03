@@ -4,7 +4,7 @@
    --light-green: #58f597;
    --light-gray: #939393;
 
-   --content--max-width: 1145px;
+   --content--max-width: 1195px;
 }
 input:focus,
 select:focus,
@@ -27,6 +27,7 @@ button:focus {
 .modal-content {
    border-radius: 20px !important;
 }
+
 /*.modal-open {*/
 /*   !*overflow-y: auto !important;*!*/
 /*   !*padding-right: 0 !important;*!*/
@@ -43,9 +44,17 @@ button:focus {
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 }
+.gradient-border {
+   border: solid 1.5px transparent;
+   border-radius: 20px;
+   background-image: linear-gradient(white, white), var(--gradientY);
+   background-origin: border-box;
+   background-clip: content-box, border-box;
+}
 .content-container-1 {
    max-width: var(--content--max-width);
    margin: 70px auto 150px auto;
+   padding: 0 25px;
 }
 .content-btn {
    padding: 15px 45px;
@@ -56,6 +65,22 @@ button:focus {
    color: white;
    border: unset;
    outline: none !important;
+}
+.content-btn-border-container {
+   border-radius: 20px;
+   text-align: center;
+}
+.content-btn-border, .content-btn-border-sm {
+   padding: 12px 42px;
+   font-weight: 300;
+   font-size: 24px;
+   color: black;
+   outline: none !important;
+   background: white;
+}
+.content-btn-border-sm {
+  padding: 8px 24px;
+   font-size: 18px;
 }
 .content-title {
    font-weight: 300;
@@ -131,17 +156,20 @@ button:focus {
    text-indent: 60px;
    box-shadow: unset;
 }
+.content-input::placeholder {
+   font-weight: 300;
+   font-size: 18px;
+   color: var(--light-gray);
+}
 .logo-small-container {
    height: 208px;
    width: 197px;
 }
-.gradient-border {
-   border: solid 1.5px transparent;
-   border-radius: 20px;
-   background-image: linear-gradient(white, white), var(--gradientY);
-   background-origin: border-box;
-   background-clip: content-box, border-box;
+.logo-big-container {
+   height: 454px;
+   width: 430px;
 }
+
 .content-tag {
    display: flex;
    font-weight: 300;
@@ -153,18 +181,13 @@ button:focus {
    display: flex;
    flex-flow: row wrap;
    max-width: 840px;
-   justify-content: center;
 }
 .content-logos-container {
    display: flex;
    flex-flow: row wrap;
    justify-content: space-evenly;
 }
-.content-input::placeholder {
-   font-weight: 300;
-   font-size: 18px;
-   color: var(--light-gray);
-}
+
 .input-icon {
    position: absolute;
    margin: 11px 0 11px 20px;

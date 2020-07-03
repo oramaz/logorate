@@ -54,7 +54,7 @@ export const SignupPage: React.FC = () => {
                   <input type="password" name="password2" required className="content-input" placeholder="Confirm the password" />
                </div>
                <div className="d-flex">
-                  <button type="submit" className="content-btn mx-auto">Let's go!</button>
+                  <button type="submit" className="content-btn mx-auto"  aria-valuetext="Let's go!"/>
                </div>
             </form>
          </div>
