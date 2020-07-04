@@ -1,22 +1,21 @@
-import React from "react"
+import React from "react";
 import "../../assets/styles/App.css";
-import {Link} from "react-router-dom";
 
 type Props = {
-   logoUrl: string;
-   name: string;
-}
+  logoUrl: string;
+  name: string;
+};
 
 export const LogoBlockLg: React.FC<Props> = (props) => {
-   const { logoUrl, name } = props
-   // onContextMenu={(e) => e.preventDefault()}
-   return (
-      <div className="logo-big-container" style={{marginBottom: "10px"}}>
-         <div className=" gradient-border" >
-            <div style={{padding: "77px 80px"}}>
-               <img src={logoUrl} width="270px" height="300px" alt={name} />
-            </div>
-         </div>
+  const { logoUrl, name } = props;
+  // onContextMenu={(e) => e.preventDefault()}
+  return (
+    <div className="logo-big-container" style={{ marginBottom: "10px" }}>
+      <div className=" gradient-border">
+        <div style={{ padding: "77px 80px" }}>
+          <img src={logoUrl} width="270px" height="300px" alt={name} />
+        </div>
       </div>
-)
-}
+    </div>
+  );
+};
