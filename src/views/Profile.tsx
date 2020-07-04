@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "../assets/styles/App.css";
 import "../assets/styles/Profile.css";
 import { useLocation } from 'react-router-dom'
@@ -8,6 +8,11 @@ import { LogoSearchInput } from "../components/General/LogoSearchInput";
 import { LabelInput } from "../components/Profile/LabelInput";
 
 export const ProfilePage: React.FC = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0)
+   },
+      [])
+
    const location = useLocation()
    const user = {
       avatar: "https://www.dw.com/image/45401789_403.jpg",
@@ -18,7 +23,7 @@ export const ProfilePage: React.FC = () => {
 
    return (
       <React.Fragment>
-         <div className="content-container-1 d-flex">
+         <div className="content-container-1 d-flex transition-load">
             <div className="mx-auto profile-container d-flex">
                <div className="profile-photo-side ">
                   <div className="mb-auto">
@@ -60,9 +65,12 @@ export const ProfilePage: React.FC = () => {
                         <div style={{ marginBottom: "30px" }}>
                            <b style={{ marginRight: "20px" }}>Current status:</b><span className="gradient-text">Monthly subscription</span>
                         </div>
-                        <div className="content-btn-border-container gradient-border">
-                           <button type="button" className="content-btn-border-sm  gradient-border mx-auto"
-                              aria-valuetext="Unsubscribe" />
+                        <div className="text-center">
+
+                           <div className="content-btn-border-container  gradient-border d-inline-block">
+                              <button type="button" className="content-btn-border-sm  gradient-border mx-auto"
+                                 aria-valuetext="Unsubscribe" />
+                           </div>
                         </div>
                      </div>
                   </div>
@@ -74,7 +82,11 @@ export const ProfilePage: React.FC = () => {
                         <div style={{ marginBottom: "30px" }}>
                            <b style={{ marginRight: "20px" }}>Current status:</b><span className="gradient-text">Autopay on</span>
                         </div>
-                        <div className="content-text-small cursor-pointer text-center" style={{ color: "red" }}>Desable autopay</div>
+                        <div className="text-center">
+                           <button type="button" className="content-btn-sm mx-auto"
+                              aria-valuetext="Apply for an autopay" />
+                        </div>
+
                      </div>
                   </div>
                </div>
