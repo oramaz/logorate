@@ -39,7 +39,6 @@ export const LogoSearchInput: React.FC<Props> = (props) => {
         type="text"
         defaultValue={query}
         onChange={(e) => delayedQuery(e.target.value)}
-        autoFocus
         autoComplete="off"
         style={{ textIndent: "20px" }}
         className="content-input"
