@@ -52,7 +52,8 @@ export const LoginForm: React.FC = () => {
           },
         }
       );
-      console.log(res);
+      sessionStorage.setItem("token", JSON.stringify(res));
+      window.location.href = "/";
     }
   };
 

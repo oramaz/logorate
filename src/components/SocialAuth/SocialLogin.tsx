@@ -19,7 +19,7 @@ export const SocialLogin: React.FC = () => {
       })
       .then((data) => {
         sessionStorage.setItem("token", JSON.stringify(data.token));
-        history.push("/login");
+        window.location.href = "/";
       })
       .catch((error) => {
         console.log(error);

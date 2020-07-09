@@ -23,8 +23,8 @@ export const ProfilePage: React.FC = () => {
   };
 
   const logOut = () => {
-    sessionStorage.clear()
-    history.push("/login")
+    sessionStorage.removeItem("token")
+    window.location.href = "/login";
   }
 
   return (
