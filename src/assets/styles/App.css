@@ -65,6 +65,7 @@ button:focus {
    color: white;
    border: unset;
    outline: none !important;
+   height: fit-content;
 }
 .content-btn-sm {
    padding: 11px 27px;
@@ -73,6 +74,7 @@ button:focus {
 .content-btn-border-container {
    border-radius: 20px;
    text-align: center;
+   height: fit-content;
 }
 .content-btn-border, .content-btn-border-sm {
    padding: 12px 42px;
@@ -81,6 +83,8 @@ button:focus {
    color: black;
    outline: none !important;
    background: white;
+   height: fit-content;
+
 }
 .content-btn-border-sm {
   padding: 8px 24px;

@@ -3,8 +3,14 @@ import "../assets/styles/App.css";
 import "../assets/styles/Profile.css";
 import { Title } from "../components/General/Title";
 import { LabelInput } from "../components/Profile/LabelInput";
+import { useHistory } from "react-router-dom"
 
 export const ProfilePage: React.FC = () => {
+  const history = useHistory()
+  if (!sessionStorage.getItem("token")) {
+    history.push("/login")
+  }
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,6 +21,11 @@ export const ProfilePage: React.FC = () => {
     username: "elonmusk",
     email: "elonmusk@gmail.com",
   };
+
+  const logOut = () => {
+    sessionStorage.clear()
+    history.push("/login")
+  }
 
   return (
     <React.Fragment>
@@ -42,7 +53,8 @@ export const ProfilePage: React.FC = () => {
               </div>
             </div>
             <div className="mx-auto mt-auto profile-actions-group">
-              <div className="cursor-pointer" style={{ marginBottom: "20px" }}>
+              <div className="cursor-pointer" style={{ marginBottom: "20px" }}
+                onClick={() => logOut()}>
                 Log out
               </div>
               <div className="cursor-pointer" style={{ color: "red" }}>

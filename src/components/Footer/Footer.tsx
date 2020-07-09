@@ -42,7 +42,15 @@ export const Footer: React.FC = () => {
               );
             })}
           </div>
-          <div className="text-right">
+          <div className="text-right d-flex">
+            <a
+              className="header-links"
+              href={process.env.PUBLIC_URL + '/Terms_of_use.pdf'}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Terms of Use
+            </a>
             <a href={`mailto:${officialEmail}`}>{officialEmail}</a>
           </div>
         </div>

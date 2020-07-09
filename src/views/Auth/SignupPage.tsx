@@ -7,6 +7,9 @@ import { Title } from "../../components/General/Title";
 
 export const SignupPage: React.FC = () => {
   const history = useHistory();
+  if (sessionStorage.getItem("token")) {
+    history.push("/")
+  }
 
   const handleSignup = async (e: any) => {
     e.preventDefault();

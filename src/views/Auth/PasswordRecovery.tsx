@@ -1,8 +1,14 @@
 import React from "react";
 import { EmailInputIcon } from "../../assets/images/Icons";
 import { Title } from "../../components/General/Title";
+import { useHistory } from "react-router-dom";
 
 export const PasswordRecovery: React.FC = () => {
+  const history = useHistory()
+  if (sessionStorage.getItem("token")) {
+    history.push("/")
+  }
+
   return (
     <div className="content-container-1 transition-load">
       <div className="title-social-container" style={{ marginBottom: "50px" }}>

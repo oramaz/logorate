@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setUsersOnline(Math.floor(Math.random() * 10) + 1);
+      setUsersOnline(Math.floor(Math.random() * 7) + 3);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -65,21 +65,35 @@ export const Header: React.FC = () => {
                 <CategoriesPopover />
               </div>
             ) : (
-              <Link key={x.name} className={"header-links"} to={x.to}>
-                <span className="m-auto">{x.name}</span>
-              </Link>
-            );
+                <Link key={x.name} className={"header-links"} to={x.to}>
+                  <span className="m-auto">{x.name}</span>
+                </Link>
+              );
           })}
-          <div className="d-flex">
-            <div
-              className="header-icon-link header-profile-icon"
-              onClick={() => {
-                history.push("/profile");
-              }}
-            >
-              <ProfileIcon />
+
+          {sessionStorage.getItem("token") &&
+            <div className="d-flex">
+              <div
+                className="header-icon-link header-profile-icon"
+                onClick={() => {
+                  history.push("/profile");
+                }}
+              >
+                <ProfileIcon />
+              </div>
             </div>
-          </div>
+          }
+          {!sessionStorage.getItem("token") &&
+            <div className="d-flex">
+              <button
+                type="button"
+                className="content-btn-sm m-auto"
+                style={{ padding: "7px 20px ", fontSize: "15px" }}
+                aria-valuetext="Log in"
+                onClick={() => history.push("/login")}
+              />
+            </div>
+          }
         </div>
       </div>
     </div>

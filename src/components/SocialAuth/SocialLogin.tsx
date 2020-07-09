@@ -18,7 +18,7 @@ export const SocialLogin: React.FC = () => {
         throw new Error("Something went wrong!");
       })
       .then((data) => {
-        sessionStorage.setItem("data", JSON.stringify(data));
+        sessionStorage.setItem("token", JSON.stringify(data.token));
         history.push("/login");
       })
       .catch((error) => {

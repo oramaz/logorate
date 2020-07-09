@@ -1,15 +1,16 @@
-import React, { useCallback, useState } from "react";
-import { SearchWhiteIcon } from "../../assets/images/Icons";
+import React, { useState, useContext } from "react";
 import { QueryPopover } from "./QueryPopover";
 import { Logo } from "../../models/Logo";
 import _ from "lodash";
 import { LogoSearchInput } from "../General/LogoSearchInput";
+import { WebPSupport } from "../../views/App";
 
 type Props = {
   logos: Logo[];
 };
 export const HomePreview: React.FC<Props> = (props) => {
   const { logos } = props;
+  const WebPBrowserSupport = useContext(WebPSupport);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleQueryChange = (query: string) => {
@@ -31,7 +32,7 @@ export const HomePreview: React.FC<Props> = (props) => {
   };
 
   return (
-    <div className="home-preview-container">
+    <div className={"home-preview-container " + (!WebPBrowserSupport ? "no-webp" : "")}>
       <div className="home-preview-container-2 mx-auto text-center">
         <div
           className="home-preview-title "

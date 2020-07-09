@@ -25,6 +25,13 @@
     color: black !important;
     text-decoration: none !important;
 }
+.header-links-decorations {
+    display: flex;
+    font-weight: 300;
+    height: inherit;
+    cursor: pointer;
+    padding: 0 25px;
+}
 .header-icon-link {
     cursor: pointer;
     margin: auto 0;
