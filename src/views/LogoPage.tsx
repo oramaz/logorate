@@ -65,26 +65,21 @@ export const LogoPage: React.FC = () => {
                   />
                 </div>
                 <div className="logo-page-info-btn">
-                  {sessionStorage.getItem("token") &&
+                  {/*<button*/}
+                  {/*   type="button"*/}
+                  {/*   className="content-btn "*/}
+                  {/*   aria-valuetext="Download SVG"*/}
+                  {/*/>*/}
+                  <div>
                     <button
-                      type="button"
-                      className="content-btn "
-                      aria-valuetext="Download SVG"
+                       type="button"
+                       className="content-btn "
+                       aria-valuetext="Get SVG"
+                       style={{ marginBottom: "15px" }}
                     />
-                  }
-                  {!sessionStorage.getItem("token") &&
-                    <div>
-                      <button
-                        type="button"
-                        className="content-btn "
-                        aria-valuetext="Get SVG"
-                        style={{ marginBottom: "15px" }}
-                      />
-                      <div className="content-text-small text-center">For 1$</div>
-                    </div>
-                  }
+                    <div className="content-text-small text-center">For 1$</div>
+                  </div>
                 </div>
-
               </div>
               <div>
                 <div
